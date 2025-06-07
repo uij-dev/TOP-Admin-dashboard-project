@@ -14,8 +14,8 @@
   --font-stack: roboto, system-ui, sans-serif;
   --text-bold: bold;
 
-  --spacer-sm: 0.9rem;
-  --spacer-md: 1.7rem;
+  --spacer-sm: 1rem;
+  --spacer-md: 2rem;
   --spacer-lg: 4.7rem;
 
   --header-icon-h: 4rem;
@@ -50,7 +50,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: minmax(auto, 1fr) 4fr;
+  grid-template: auto 1fr/ minmax(auto, 1fr) 4fr;
   background: var(--gray-bg);
 }
 
@@ -58,7 +58,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   height: max-content;
-  column-gap: 2rem;
+  gap: 3rem 2rem;
   background: var(--header-bg-col);
   padding: var(--spacer-md) var(--spacer-lg);
 }
@@ -100,6 +100,7 @@ body {
   --profile-h: 6rem;
   --profile-w: var(--profile-h);
   --profile-main-text-s: 2rem;
+  --profile-gap: 3.5rem;
 
   width: max-content;
   height: max-content;
@@ -107,7 +108,7 @@ body {
   justify-self: center;
   align-items: center;
   grid-template-columns: repeat(3, auto);
-  column-gap: 3.5rem;
+  column-gap: var(--profile-gap);
   color: var(--text-secondary);
 
   .avat-profile-pic-box {
@@ -127,7 +128,46 @@ body {
   }
 }
 
+.profile-sect.profile-sect--lg {
+  --profile-h: 10rem;
+  --profile-gap: 2.5rem;
+  --profile-main-text-s: 2.8rem;
+  justify-self: start;
 
+  span {
+    display: block;
+    font-size: 1.8rem;
+  }
+}
+
+/* BUTTON SECTION*/
+.header__redirect-btns {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  place-self: center;
+  flex-wrap: wrap;
+}
+.btn{
+  font-weight: var(--text-bold);
+  padding: var(--spacer-sm) calc(var(--spacer-md) * 2);
+  font-size: 2.3rem;
+  border-radius: 10rem;
+  background: var(--btn-bg-col);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color .1s;
+
+  &:link, &:visited {
+    text-decoration: none;
+    color: var(--text-sdbar-col)
+  };
+
+  &:hover, &:focus-visible {
+    background: #0caaff;
+  }
+}
 
 /* SIDEBAR SECTION */
 .sdbar {
