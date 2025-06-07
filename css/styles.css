@@ -48,6 +48,7 @@ body {
 .grid {
   display: grid;
   grid-template-columns: minmax(auto, 1fr) 4fr;
+  background: var(--gray-bg);
 }
 
 .sdbar {
@@ -70,9 +71,17 @@ body {
       height: 9rem;
     }
 
+    .sdbar__logo-text {
+      font-size: 4rem;
+    }
+
     .sdbar__icon-box {
       height: 3.5rem;
       justify-self: center;
+    }
+
+    p {
+      font-size: 2rem;
     }
 
     :not(p:last-of-type) {
