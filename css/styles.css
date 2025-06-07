@@ -1,0 +1,16 @@
+:root {
+    /* Colors */
+    --sidebar-bg-col: #1992D4;
+    --header-bg-col: #fff;
+    --gray-bg: #F0F2F5;
+
+    --proj-comp-border-col: #F4C542;
+    --btn-bg-col: var(--sidebar-bg-col);
+    --proj-comp-bg: var(--header-bg-col);
+
+    --text-pri: #000;
+    --text-sec: #6b7280;
+    --text-sidebar-col: #fff;
+
+    --font-stack: roboto, system-ui, sans-serif;
+}
