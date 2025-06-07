@@ -12,10 +12,13 @@
   --text-sdbar-col: #fff;
 
   --font-stack: roboto, system-ui, sans-serif;
+  --text-bold: bold;
 
-  --spacer-sm: 0.8rem;
-  --spacer-md: 1.6rem;
-  --spacer-lg: 4.2rem;
+  --spacer-sm: 0.9rem;
+  --spacer-md: 1.7rem;
+  --spacer-lg: 4.7rem;
+
+  --header-icon-h: 4rem;
 }
 
 *,
@@ -54,52 +57,85 @@ body {
 .header {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  height: max-content;
+  column-gap: 2rem;
   background: var(--header-bg-col);
+  padding: var(--spacer-md) var(--spacer-lg);
 }
 
+/* SEARCH SECTION */
 .search-sect {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: var(--spacer-sm) var(--spacer-lg);
 
   height: max-content;
 
   .search-sect__icon-box {
-    width: 4rem;
-    margin-top: 1rem;
+    height: var(--header-icon-h);
   }
 
   input[type="search"] {
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    outline: none                 ;
+    outline: none;
     background: var(--gray-bg);
     font-family: inherit;
     width: max(30rem, 100%);
-    font-size: inherit;
+    font-size: 2rem;
     border-radius: 10rem;
     padding: 1.5rem;
-    box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, .2);
+    box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
 
     &:focus-visible {
       outline: 1px solid var(--sdbar-bg-col);
-    }
-
-    &::marker {
-      color: green;
+      outline-offset: 0.5rem;
     }
   }
 }
 
+/* PROFILE SECTION*/
+.profile-sect {
+  --profile-h: 6rem;
+  --profile-w: var(--profile-h);
+  --profile-main-text-s: 2rem;
 
+  width: max-content;
+  height: max-content;
+  display: grid;
+  justify-self: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 3.5rem;
+  color: var(--text-secondary);
+
+  .avat-profile-pic-box {
+    width: var(--profile-w);
+    height: var(--profile-h);
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  .profile__sect-uname {
+    font-size: var(--profile-main-text-s);
+    font-weight: var(--text-bold);
+  }
+
+  .notif-bell-box {
+    height: var(--header-icon-h);
+  }
+}
+
+
+
+/* SIDEBAR SECTION */
 .sdbar {
   background: var(--sdbar-bg-col);
   color: var(--text-sdbar-col);
   padding: var(--spacer-md);
   grid-area: 1 / 1 / -1 / 2;
-  font-weight: bold;
+  font-weight: var(--text-bold);
 
   .sdbar__row {
     display: grid;
