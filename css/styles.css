@@ -56,7 +56,7 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
   height: max-content;
   gap: 3rem 2rem;
   background: var(--header-bg-col);
@@ -70,8 +70,6 @@ body {
   align-items: center;
   gap: 1rem;
 
-  height: max-content;
-
   .search-sect__icon-box {
     height: var(--icon-h);
   }
@@ -83,7 +81,7 @@ body {
     outline: none;
     background: var(--gray-bg);
     font-family: inherit;
-    width: max(30rem, 100%);
+    width: 90%;
     font-size: 2rem;
     border-radius: 10rem;
     padding: 1.5rem;
@@ -98,7 +96,7 @@ body {
 
 /* PROFILE SECTION*/
 .profile-sect {
-  --profile-h: 6rem;
+  --profile-h: 7rem;
   --profile-w: var(--profile-h);
   --profile-main-text-s: 2rem;
   --profile-gap: 3.5rem;
@@ -146,8 +144,7 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
-  place-self: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .btn{
@@ -230,7 +227,7 @@ body {
   grid-template-columns: repeat(auto-fill, 47rem);
   align-items: start;
   grid-auto-rows: 30rem;
-  gap: 2.5rem;
+  gap: 3rem;
 
   .projs__card {
     display: flex;
@@ -240,6 +237,10 @@ body {
     border-radius: 1rem;
     border-left: 1rem solid var(--proj-comp-border-col);
     height: 100%;
+
+    .projs__card-title {
+      color: var(--text-secondary);
+    }
 
     .projs__card-para {
       flex: 1;
