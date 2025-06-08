@@ -3,16 +3,16 @@
   --header-bg-col: #fff;
   --gray-bg: #f0f2f5;
 
-  --proj-comp-border-col: #f4c542;
+  --card-left-bder-col: #f4c542;
   --btn-bg-col: var(--sdbar-bg-col);
-  --proj-comp-bg: var(--header-bg-col);
+  --card-proj-bg: var(--header-bg-col);
 
-  --text-secondary: #000;
-  --text-primary: #6b7280;
-  --text-sdbar-col: #fff;
+  --text-black: #000;
+  --text-gray: #6b7280;
+  --text-white: #fff;
+  --text-bold: 600;
 
   --font-stack: roboto, system-ui, sans-serif;
-  --text-bold: bold;
 
   --spacer-sm: 1rem;
   --spacer-md: 2rem;
@@ -43,14 +43,14 @@ body {
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 1.5;
-  color: var(--text-primary);
+  color: var(--text-gray);
   box-sizing: border-box;
   height: 100vh;
 }
 
 .grid-body {
   display: grid;
-  grid-template: auto 1fr/ minmax(auto, 1fr) 4fr;
+  grid-template: auto 1fr / minmax(auto, 1fr) 4fr;
   background: var(--gray-bg);
 }
 
@@ -60,7 +60,7 @@ body {
   height: max-content;
   gap: 3rem 2rem;
   background: var(--header-bg-col);
-  padding: var(--spacer-md) var(--spacer-lg);
+  padding: var(--spacer-md) calc(var(--spacer-lg) * 2);
   margin-bottom: var(--spacer-md);
 }
 
@@ -104,11 +104,11 @@ body {
   width: max-content;
   height: max-content;
   display: grid;
-  justify-self: center;
+  justify-self: end;
   align-items: center;
   grid-template-columns: repeat(3, auto);
   column-gap: var(--profile-gap);
-  color: var(--text-secondary);
+  color: var(--text-black);
 
   .avat-profile-pic-box {
     width: var(--profile-w);
@@ -143,24 +143,25 @@ body {
 .header__redirect-btns {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .btn{
-  font-weight: var(--text-bold);
-  padding: var(--spacer-sm) calc(var(--spacer-md) * 2);
-  font-size: 2.3rem;
-  border-radius: 10rem;
-  background: var(--btn-bg-col);
   border: none;
   cursor: pointer;
   outline: none;
+  font-weight: var(--text-bold);
+  padding: .4em 1.5em;
+  font-size: 2.3rem;
+  border-radius: 10rem;
+  background: var(--btn-bg-col);
   transition: background-color .1s;
 
   &:link, &:visited {
     text-decoration: none;
-    color: var(--text-sdbar-col)
+    color: var(--text-white)
   };
 
   &:hover, &:focus-visible {
@@ -172,7 +173,7 @@ body {
 /* SIDEBAR SECTION */
 .sdbar {
   background: var(--sdbar-bg-col);
-  color: var(--text-sdbar-col);
+  color: var(--text-white);
   padding: var(--spacer-md);
   grid-area: 1 /1 / -1/ 2;
   font-weight: var(--text-bold);
@@ -215,7 +216,7 @@ body {
   margin-left: var(--spacer-md);
 
   .grid-main__header {
-    color: var(--text-secondary);
+    color: var(--text-black);
     font-size: 2.5rem;
     height: min-content;
     margin-bottom: var(--spacer-sm);
@@ -232,14 +233,14 @@ body {
   .projs__card {
     display: flex;
     flex-direction: column;
-    background: var(--proj-comp-bg);
+    background: var(--card-proj-bg);
     padding: calc(var(--spacer-md) * 1.5) calc(var(--spacer-sm) * 2) ;
     border-radius: 1rem;
-    border-left: 1rem solid var(--proj-comp-border-col);
+    border-left: 1rem solid var(--card-left-bder-col);
     height: 100%;
 
     .projs__card-title {
-      color: var(--text-secondary);
+      color: var(--text-black);
     }
 
     .projs__card-para {
@@ -256,7 +257,4 @@ body {
       }
     }
   }
-
-
-
 }
