@@ -1,11 +1,11 @@
 :root {
-  --sdbar-bg-col: #1992d4;
-  --header-bg-col: #fff;
+  --blue-bg: #1992d4;
+  --white-bg: #fff;
   --gray-bg: #f0f2f5;
 
   --card-left-bder-col: #f4c542;
-  --btn-bg-col: var(--sdbar-bg-col);
-  --card-proj-bg: var(--header-bg-col);
+  --btn-bg-col: var(--blue-bg);
+  --card-proj-bg: var(--white-bg);
 
   --text-black: #000;
   --text-gray: #6b7280;
@@ -19,6 +19,7 @@
   --spacer-lg: 4.7rem;
 
   --icon-h: 4rem;
+  --card-box-bdr-radius: 1rem;
 }
 
 *,
@@ -43,7 +44,7 @@ body {
   font-size: 1.6rem;
   font-weight: normal;
   line-height: 1.5;
-  color: var(--text-gray);
+  color: var(--text-black);
   box-sizing: border-box;
   height: 100vh;
 }
@@ -59,7 +60,7 @@ body {
   grid-template-columns: 3fr 2fr;
   height: max-content;
   gap: 3rem 2rem;
-  background: var(--header-bg-col);
+  background: var(--white-bg);
   padding: var(--spacer-md) calc(var(--spacer-lg) * 2);
   margin-bottom: var(--spacer-md);
 }
@@ -68,7 +69,7 @@ body {
 .search-sect {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2.5rem;
 
   .search-sect__icon-box {
     height: var(--icon-h);
@@ -81,14 +82,14 @@ body {
     outline: none;
     background: var(--gray-bg);
     font-family: inherit;
-    width: 90%;
+    width: 100%;
     font-size: 2rem;
     border-radius: 10rem;
     padding: 1.5rem;
     box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
 
     &:focus-visible {
-      outline: 1px solid var(--sdbar-bg-col);
+      outline: 1px solid var(--blue-bg);
       outline-offset: 0.5rem;
     }
   }
@@ -108,7 +109,6 @@ body {
   align-items: center;
   grid-template-columns: repeat(3, auto);
   column-gap: var(--profile-gap);
-  color: var(--text-black);
 
   .avat-profile-pic-box {
     width: var(--profile-w);
@@ -148,31 +148,33 @@ body {
   justify-content: flex-end;
 }
 
-.btn{
+.btn {
   border: none;
   cursor: pointer;
   outline: none;
   font-weight: var(--text-bold);
-  padding: .4em 1.5em;
+  padding: 0.4em 1.5em;
   font-size: 2.3rem;
   border-radius: 10rem;
   background: var(--btn-bg-col);
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     text-decoration: none;
-    color: var(--text-white)
-  };
+    color: var(--text-white);
+  }
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     background: rgb(19, 110, 160);
-    box-shadow: 0 .1rem .5rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.1rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   }
 }
 
 /* SIDEBAR SECTION */
 .sdbar {
-  background: var(--sdbar-bg-col);
+  background: var(--blue-bg);
   color: var(--text-white);
   padding: var(--spacer-md);
   grid-area: 1 /1 / -1/ 2;
@@ -196,7 +198,7 @@ body {
     }
 
     .sdbar__icon-box {
-      height: 3.5rem;
+      height: var(--icon-h);
       justify-self: center;
     }
 
@@ -213,10 +215,10 @@ body {
 .grid-main {
   display: grid;
   grid-template: auto 1fr / 2fr 1fr;
-  margin-left: var(--spacer-md);
+  margin: var(--spacer-md);
+  column-gap: 1.6rem;
 
   .grid-main__header {
-    color: var(--text-black);
     font-size: 2.5rem;
     height: min-content;
     margin-bottom: var(--spacer-sm);
@@ -234,8 +236,8 @@ body {
     display: flex;
     flex-direction: column;
     background: var(--card-proj-bg);
-    padding: calc(var(--spacer-md) * 1.5) calc(var(--spacer-sm) * 2) ;
-    border-radius: 1rem;
+    padding: calc(var(--spacer-md) * 1.5) calc(var(--spacer-sm) * 2);
+    border-radius: var(--card-box-bdr-radius);
     border-left: 1rem solid var(--card-left-bder-col);
     height: 100%;
 
@@ -245,6 +247,7 @@ body {
 
     .projs__card-para {
       flex: 1;
+      color: var(--text-gray);
     }
 
     .projs-card-icons {
@@ -255,6 +258,27 @@ body {
       .projs__card-icon {
         height: var(--icon-h);
       }
+    }
+  }
+}
+
+.announce-box {
+  background: var(--white-bg);
+  padding: var(--spacer-lg);
+  border-radius: var(--card-box-bdr-radius);
+  align-self: start;
+  max-width: 45rem;
+
+  .announce-box__title:not(:first-of-type) {
+    padding-top: var(--spacer-md);
+  }
+
+  .announce-box__para {
+    color: var(--text-gray);
+    padding-bottom: var(--spacer-md);
+
+    &:not(:last-of-type) {
+      border-bottom: 0.1rem solid #e1e4e9;
     }
   }
 }
