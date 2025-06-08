@@ -18,7 +18,7 @@
   --spacer-md: 2rem;
   --spacer-lg: 4.7rem;
 
-  --header-icon-h: 4rem;
+  --icon-h: 4rem;
 }
 
 *,
@@ -48,7 +48,7 @@ body {
   height: 100vh;
 }
 
-.grid {
+.grid-body {
   display: grid;
   grid-template: auto 1fr/ minmax(auto, 1fr) 4fr;
   background: var(--gray-bg);
@@ -61,6 +61,7 @@ body {
   gap: 3rem 2rem;
   background: var(--header-bg-col);
   padding: var(--spacer-md) var(--spacer-lg);
+  margin-bottom: var(--spacer-md);
 }
 
 /* SEARCH SECTION */
@@ -72,7 +73,7 @@ body {
   height: max-content;
 
   .search-sect__icon-box {
-    height: var(--header-icon-h);
+    height: var(--icon-h);
   }
 
   input[type="search"] {
@@ -124,7 +125,7 @@ body {
   }
 
   .notif-bell-box {
-    height: var(--header-icon-h);
+    height: var(--icon-h);
   }
 }
 
@@ -148,6 +149,7 @@ body {
   place-self: center;
   flex-wrap: wrap;
 }
+
 .btn{
   font-weight: var(--text-bold);
   padding: var(--spacer-sm) calc(var(--spacer-md) * 2);
@@ -165,7 +167,8 @@ body {
   };
 
   &:hover, &:focus-visible {
-    background: #0caaff;
+    background: rgb(19, 110, 160);
+    box-shadow: 0 .1rem .5rem 0 rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -174,7 +177,7 @@ body {
   background: var(--sdbar-bg-col);
   color: var(--text-sdbar-col);
   padding: var(--spacer-md);
-  grid-area: 1 / 1 / -1 / 2;
+  grid-area: 1 /1 / -1/ 2;
   font-weight: var(--text-bold);
 
   .sdbar__row {
@@ -207,4 +210,52 @@ body {
       margin-bottom: var(--spacer-md);
     }
   }
+}
+
+.grid-main {
+  display: grid;
+  grid-template: auto 1fr / 2fr 1fr;
+  margin-left: var(--spacer-md);
+
+  .grid-main__header {
+    color: var(--text-secondary);
+    font-size: 2.5rem;
+    height: min-content;
+    margin-bottom: var(--spacer-sm);
+  }
+}
+
+.projs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 47rem);
+  align-items: start;
+  grid-auto-rows: 30rem;
+  gap: 2.5rem;
+
+  .projs__card {
+    display: flex;
+    flex-direction: column;
+    background: var(--proj-comp-bg);
+    padding: calc(var(--spacer-md) * 1.5) calc(var(--spacer-sm) * 2) ;
+    border-radius: 1rem;
+    border-left: 1rem solid var(--proj-comp-border-col);
+    height: 100%;
+
+    .projs__card-para {
+      flex: 1;
+    }
+
+    .projs-card-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+
+      .projs__card-icon {
+        height: var(--icon-h);
+      }
+    }
+  }
+
+
+
 }
