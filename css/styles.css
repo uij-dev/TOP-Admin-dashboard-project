@@ -38,6 +38,7 @@ img {
 
 html {
   font-size: 62.5%;
+
 }
 
 body {
@@ -177,7 +178,7 @@ body {
 .sdbar {
   background: var(--blue-bg);
   color: var(--text-white);
-  padding: var(--spacer-md) var(--spacer-lg) var(--spacer-md) var(--spacer-md);
+  padding: var(--spacer-md) var(--spacer-lg) var(--spacer-lg) var(--spacer-md);
   grid-area: 1 /1 / -1/ 2;
   font-weight: var(--text-bold);
 
@@ -229,7 +230,7 @@ body {
 
 .projs {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 47rem);
+  grid-template-columns: repeat(auto-fit, minmax(47rem, 1fr));
   align-items: start;
   grid-auto-rows: 30rem;
   gap: 3rem;
@@ -271,7 +272,7 @@ body {
   padding: var(--spacer-lg);
   border-radius: var(--card-box-bdr-radius);
   align-self: start;
-  max-width: 45rem;
+  width: 45rem;
   box-shadow: var(--box-shadow);
 
   .announce-box__title {
@@ -295,7 +296,7 @@ body {
   background: var(--white-bg);
   border-radius: var(--card-box-bdr-radius);
   padding: calc(var(--spacer-md) * 2);
-  max-width: 45rem;
+  width: 45rem;
   box-shadow: var(--box-shadow);
 
   & > div {
