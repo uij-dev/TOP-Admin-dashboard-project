@@ -13,27 +13,19 @@
 <body class="grid-body">
   <header class="header">
     <div class="header__search-sect">
-      <div class="header__search-icon-wrapper">
-        <img src="./images/search-icon.svg" alt="Search Icon">
-      </div>
+      <img class="header__search-icon" src="./images/search-icon.svg" alt="Search Icon">
 
       <input class="header__search-bar" type="search">
     </div>
 
     <div class="usr-profile usr-profile--sm">
-      <div class="usr-profile__notif-bell-wapper">
-        <img src="./images/bell-icon.svg" alt="Notification Icon">
-      </div>
-      <div class="usr-profile-pic-wrapper">
-        <img src="./images/avater-1.jpg" alt="User Profile Picture">
-      </div>
+      <img class="usr-profile__notif-bell" src="./images/bell-icon.svg" alt="Notification Icon">
+      <img class="usr-profile-pic" src="./images/avater-1.jpg" alt="User Profile Picture">
       <h3 class="usr-profile__text">Morgan Oaklay</h3>
     </div>
 
     <div class="usr-profile">
-      <div class="usr-profile-pic-wrapper">
-        <img src="./images/avater-1.jpg" alt="User Profile Picture">
-      </div>
+      <img class="usr-profile-pic" src="./images/avater-1.jpg" alt="User Profile Picture">
       <h2 class="usr-profile__text">
         <span class="usr-profile__text--sm">
           Hi there,
@@ -55,63 +47,59 @@
     </ul>
   </header>
 
-
-  <aside class="sdbar">
-    <div class="sdbar__row">
-      <div class="sdbar__log-box">
-        <img src="./images/logo-white.svg" alt="Dashbord Logo">
-      </div>
-      <h1 class="sdbar__logo-text">Dashboard</h1>
+  <aside class="sidebar">
+    <div class="sidebar__logo-wrapper">
+      <img class="sidebar__logo-icon" src="./images/logo-white.svg" alt="Dashbord Logo">
+      <h1 class="sidebar__logo-text">Dashboard</h1>
     </div>
 
-    <div class="sdbar__row">
-      <div class="sdbar__icon-box">
-        <img src="./images/home-icon.svg" alt="Home Icon">
-      </div>
-      <p>Home</p>
+    <ul class="nav">
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/home-icon.svg" alt="Home Icon">
+        <p>Home</p>
+      </li>
 
-      <div class="sdbar__icon-box">
-        <img src="./images/profile-card-icon.svg" alt="Profile Card Icon">
-      </div>
-      <p>Profile</p>
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/profile-card-icon.svg" alt="Profile Card Icon">
+        <p>Profile</p>
+      </li>
 
-      <div class="sdbar__icon-box">
-        <img src="./images/msg-icon.svg" alt="Messages Icon">
-      </div>
-      <p>Messages</p>
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/msg-icon.svg" alt="Messages Icon">
+        <p>Messages</p>
+      </li>
 
-      <div class="sdbar__icon-box">
-        <img src="./images/clock-icon.svg" alt="History Icon">
-      </div>
-      <p>History</p>
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/clock-icon.svg" alt="History Icon">
+        <p>History</p>
+      </li>
 
-      <div class="sdbar__icon-box">
-        <img src="./images/task-icon.svg" alt="Tasks Icon">
-      </div>
-      <p>Tasks</p>
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/task-icon.svg" alt="Tasks Icon">
+        <p>Tasks</p>
+      </li>
 
-      <div class="sdbar__icon-box">
-        <img src="./images/community-icon.svg" alt="Communities Icon">
-      </div>
-      <p>Communities</p>
-    </div>
+      <li class="nav__item nav__item--space-buttom">
+        <img class="nav__item-icon" src="./images/community-icon.svg" alt="Communities Icon">
+        <p>Communities</p>
+      </li>
 
-    <div class="sdbar__row">
-      <div class="sdbar__icon-box">
-        <img src="./images/settings-icon.svg" alt="Settings Icon">
-      </div>
-      <p>Settings</p>
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/settings-icon.svg" alt="Settings Icon">
+        <p>Settings</p>
+      </li>
 
-      <div class="sdbar__icon-box">
-        <img src="./images/question-mark-icon.svg" alt="Support Icon">
-      </div>
-      <p>Support</p>
 
-      <div class="sdbar__icon-box">
-        <img src="./images/privacy-icon.svg" alt="Home Icon">
-      </div>
-      <p>Privacy</p>
-    </div>
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/question-mark-icon.svg" alt="Support Icon">
+        <p>Support</p>
+      </li>
+
+      <li class="nav__item">
+        <img class="nav__item-icon" src="./images/privacy-icon.svg" alt="Home Icon">
+        <p>Privacy</p>
+      </li>
+    </ul>
   </aside>
 
   <main class="grid-main">
@@ -124,10 +112,7 @@
       <div class="projs__card">
         <h2 class="projs__card-title">Super Cool Project</h2>
         <p class="projs__card-para">
-          Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Officia alias,
-          amet dolorem magnam facilis
-          quisquam!
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia alias, amet dolorem magnam facilis quisquam!
         </p>
         <div class="projs-card-icons">
           <div class="projs__card-icon">
@@ -239,29 +224,24 @@
       <div class="announce-box">
         <h3 class="announce-box__title">Site Maintenance</h3>
         <p class="announce-box__para">
-          Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Quidem minima consectetur
-          numquam temporibus.
+          Lorem ipsum dolor sit amet consecteturadipisicing elit. Quidem minimaconsecteturnumquam temporibus.
         </p>
         <h3 class="announce-box__title">Community Share Day</h3>
         <p class="announce-box__para">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Deserunt minima repellat eum placeat.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.Deserunt minima repellat eum placeat.
         </p>
         <h3 class="announce-box__title">Updated Privacy Policy</h3>
         <p class="announce-box__para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Nihil facere repellat
-          autem cumque itaque rem molestias.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facere repellat autem cumque itaque rem
+          molestias.
         </p>
       </div>
+
       <h2 class="grid-main__header">Trending</h2>
 
       <div class="trends-box">
         <div>
-          <div class="trends_img-profi-box">
-            <img src="./images/avater-2.jpg" alt="Profile Image">
-          </div>
+          <img class="trends_img-profi-box" src="./images/avater-2.jpg" alt="Profile Image">
           <div class="trends-box__text">
             <h3>@tegan</h3>
             <p>World peace Builder</p>
@@ -269,9 +249,7 @@
         </div>
 
         <div>
-          <div class="trends_img-profi-box">
-            <img src="./images/avater-3.svg" alt="Profile Image">
-          </div>
+          <img class="trends_img-profi-box" src="./images/avater-3.svg" alt="Profile Image">
           <div class="trends-box__text">
             <h3>@tegan</h3>
             <p>Super cool project</p>
@@ -279,9 +257,7 @@
         </div>
 
         <div>
-          <div class="trends_img-profi-box">
-            <img src="./images/avater-4.svg" alt="Profile Image">
-          </div>
+          <img class="trends_img-profi-box" src="./images/avater-4.svg" alt="Profile Image">
           <div class="trends-box__text">
             <h3>@tegan</h3>
             <p>Life changing app</p>
@@ -289,9 +265,7 @@
         </div>
 
         <div>
-          <div class="trends_img-profi-box">
-            <img src="./images/avater-5.jpg" alt="Profile Image">
-          </div>
+          <img class="trends_img-profi-box" src="./images/avater-5.jpg" alt="Profile Image">
           <div class="trends-box__text">
             <h3>@tegan</h3>
             <p>No traffic maker</p>
