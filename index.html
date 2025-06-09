@@ -12,12 +12,12 @@
 
 <body class="grid-body">
   <header class="header">
-    <div class="search-sect">
-      <div class="search-sect__icon-box">
+    <div class="header__search-sect">
+      <div class="header__search-icon-wrapper">
         <img src="./images/search-icon.svg" alt="Search Icon">
       </div>
 
-      <input type="search">
+      <input class="header__search-bar" type="search">
     </div>
 
     <div class="profile-sect">
@@ -114,9 +114,9 @@
 
     <h2 class="grid-main__header">Your Projects</h2>
     <h2 class="grid-main__header">Annoucements</h2>
-
+    
     <div class="projs">
-
+      
       <div class="projs__card">
         <h2 class="projs__card-title">Super Cool Project</h2>
         <p class="projs__card-para">
@@ -230,28 +230,71 @@
         </div>
       </div>
     </div>
-    <div class="announce-box">
-      <h3 class="announce-box__title">Site Maintenance</h3>
-      <p class="announce-box__para">
-        Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quidem minima consectetur
-        numquam temporibus.
-      </p>
 
-      <h3 class="announce-box__title">Community Share Day</h3>
-      <p class="announce-box__para">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Deserunt minima repellat eum placeat.
-      </p>
+    <div>
+      <div class="announce-box">
+        <h3 class="announce-box__title">Site Maintenance</h3>
+        <p class="announce-box__para">
+          Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Quidem minima consectetur
+          numquam temporibus.
+        </p>
+        <h3 class="announce-box__title">Community Share Day</h3>
+        <p class="announce-box__para">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Deserunt minima repellat eum placeat.
+        </p>
+        <h3 class="announce-box__title">Updated Privacy Policy</h3>
+        <p class="announce-box__para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nihil facere repellat
+          autem cumque itaque rem molestias.
+        </p>
+      </div>
+      <h2 class="grid-main__header">Trending</h2>
+      
+        <div class="trends-box">
+          <div>
+            <div class="trends_img-profi-box">
+              <img src="./images/avater-2.jpg" alt="Profile Image">
+            </div>
+            <div class="trends-box__text">
+              <h3>@tegan</h3>
+              <p>World peace Builder</p>
+            </div>
+          </div>
 
-      <h3 class="announce-box__title">Updated Privacy Policy</h3>
-      <p class="announce-box__para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Nihil facere repellat
-        autem cumque itaque rem molestias.
-      </p>
+          <div>
+            <div class="trends_img-profi-box">
+              <img src="./images/avater-3.svg" alt="Profile Image">
+            </div>
+            <div class="trends-box__text">
+              <h3>@tegan</h3>
+              <p>Super cool project</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="trends_img-profi-box">
+              <img src="./images/avater-4.svg" alt="Profile Image">
+            </div>
+            <div class="trends-box__text">
+              <h3>@tegan</h3>
+              <p>Life changing app</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="trends_img-profi-box">
+              <img src="./images/avater-5.jpg" alt="Profile Image">
+            </div>
+            <div class="trends-box__text">
+              <h3>@tegan</h3>
+              <p>No traffic maker</p>
+            </div>
+          </div>
+        </div>
     </div>
   </main>
 </body>
-
 </html>
