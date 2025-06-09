@@ -55,7 +55,7 @@ body {
   display: grid;
   grid-template: auto 1fr / minmax(auto, 1fr) 4fr;
   background: var(--gray-bg);
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .header {
@@ -109,6 +109,7 @@ body {
     align-items: center;
     grid-template-columns: repeat(3, auto);
     column-gap: var(--profile-gap);
+    width: max-content;
 
     .usr-profile-pic-wrapper {
       width: var(--profile-pic-w);
@@ -121,7 +122,7 @@ body {
       font-size: var(--profile-main-text-s);
       font-weight: var(--text-bold);
     }
-    
+
     .usr-profile__text--sm {
       display: block;
       font-size: 1.8rem;
@@ -145,7 +146,7 @@ body {
     gap: 3rem;
     align-items: center;
     justify-content: flex-end;
-    
+
     .btn {
       border: none;
       cursor: pointer;
@@ -156,13 +157,13 @@ body {
       border-radius: 10rem;
       background: var(--btn-bg-col);
       transition: background-color 0.1s;
-      
+
       &:link,
       &:visited {
         text-decoration: none;
         color: var(--text-white);
       }
-      
+
       &:hover,
       &:focus-visible {
         background: rgb(19, 110, 160);
@@ -176,7 +177,7 @@ body {
 .sdbar {
   background: var(--blue-bg);
   color: var(--text-white);
-  padding: var(--spacer-md);
+  padding: var(--spacer-md) var(--spacer-lg) var(--spacer-md) var(--spacer-md);
   grid-area: 1 /1 / -1/ 2;
   font-weight: var(--text-bold);
 
